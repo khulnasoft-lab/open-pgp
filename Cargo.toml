@@ -1,0 +1,17 @@
+[package]
+name = "open-pgp"
+version = "0.1.0"
+edition = "2021"
+description = "Implementation of the IETF OpenPGP standard for secure communication and data encryption."
+authors = ["Khulnasoft Lab <contact@khulnasoft.com>"]
+homepage = "https://github.com/khulnasoft-lab/open-pgp"
+repository = "https://github.com/khulnasoft-lab/open-pgp"
+documentation = "https://docs.rs/open-pgp"
+readme = "README.md"
+license = "LGPL-2.0-or-later"
+keywords = ["cryptography", "openpgp", "pgp", "encryption", "signing"]
+categories = ["cryptography", "authentication", "email"]
+exclude = [".github/", "tests/", "examples/"]
+
+[dependencies]
+# Add dependencies here
