@@ -1,0 +1,23 @@
+name: Publish to crates.io
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  publish:
+    name: Publish Crate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Log in to crates.io
+        run: cargo login ${{ secrets.CARGO_REGISTRY_TOKEN }}
+
+      - name: Publish crate
+        run: cargo publish --allow-dirty
